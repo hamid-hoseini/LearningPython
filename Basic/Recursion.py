@@ -15,11 +15,14 @@ def fib(n):
         a,b = b,a+b
     return a   
 
+'''
+we need to create a module named myFuctions and add fib and fib_2 as new functions inside that module 
+'''
 
-t1 = timeit.Timer("fib(36)", "from greetings import fib")
+t1 = timeit.Timer("fib(36)", "from myFuctions import fib")
 print(t1.timeit(5))
 # result: 7.670954801142216e-06
 
-t2 = timeit.Timer("fib_2(36)", "from greetings import fib_2")
+t2 = timeit.Timer("fib_2(36)", "from myFuctions import fib_2")
 print(t2.timeit(5))
 # result: 15.113292891066521
