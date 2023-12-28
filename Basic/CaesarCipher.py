@@ -36,3 +36,40 @@ def encrypt(text,required_shift):
             alpha_index = alphabet.find(char)
             out_string = out_string + alphabet[shift_amount(alpha_index +required_shift)]
     return out_string
+
+
+# Execute:
+basker = '''I confess at these words a shudder passed
+through me. There was a thrill in the doctor’s voice
+which showed that he was himself deeply moved
+by that which he told us. Holmes leaned forward
+in his excitement and his eyes had the hard, dry
+glitter which shot from them when he was keenly
+interested.'''
+
+encrypt_basker = encrypt(basker,10)
+print(encrypt_basker)
+
+# output:
+'''
+s myxpocc kd droco gybnc k crennob zkccon
+drbyeqr wo. drobo gkc k drbsvv sx dro nymdyb’c fysmo
+grsmr crygon drkd ro gkc rswcovp noozvi wyfon
+li drkd grsmr ro dyvn ec. ryvwoc vokxon pybgkbn
+sx rsc ohmsdowoxd kxn rsc oioc rkn dro rkbn, nbi
+qvsddob grsmr cryd pbyw drow grox ro gkc uooxvi
+sxdobocdon.
+'''
+
+print(encrypt(encrypt_basker,-10))
+
+# output:
+'''
+I confess at these words a shudder passed
+through me. There was a thrill in the doctor’s voice
+which showed that he was himself deeply moved
+by that which he told us. Holmes leaned forward
+in his excitement and his eyes had the hard, dry
+glitter which shot from them when he was keenly
+interested.
+'''
