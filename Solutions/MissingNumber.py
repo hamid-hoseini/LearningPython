@@ -1,4 +1,11 @@
+'''
+You have been provided with the list of positive integers from 1 to n. All the numbers from 1 to n are present except x, and you must find x. 
+Example:
+4 5 3 2 8 1 6
 
+n = 8 
+missing number = 7
+'''
 
 def find_missing(input_list):
 
